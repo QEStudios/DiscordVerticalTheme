@@ -1,0 +1,72 @@
+/**
+ * @name VerticalMonitor
+ * @description Makes discord better suited for vertical monitors by making the left sidebars collapsible (and some other minor details).
+ * @author SKM GEEK
+ * @version 1.0.0
+ * @authorId 665724183094755359
+ * @website https://www.skmgeek.com
+ * @source https://github.com/QEStudios/DiscordVerticalTheme
+ * @updateUrl https://raw.githubusercontent.com/QEStudios/DiscordVerticalTheme/refs/heads/main/DiscordVerticalTheme.theme.css
+ */
+
+/* server left side bar */
+.guilds_a4d4d9 {
+    transition-duration: var(--transition-time);
+    width: 10px;
+}
+
+.guilds_a4d4d9:hover {
+    transition-duration: var(--transition-time);
+    width: 70px;
+}
+
+/* channel left side bar */
+.sidebar_a4d4d9 {
+    transition-duration: var(--transition-time);
+    width: 120px;
+}
+
+.sidebar_a4d4d9:hover {
+    transition-duration: var(--transition-time);
+    width: 250px;
+}
+
+/* Selected channel pill */
+.item_c4cd66 {
+    width: 10px;
+}
+
+/* Ping notification */
+.lowerBadge_c5f96a {
+    left: -50%;
+    top: 50%;
+    transform: translateY(-50%) !important;
+    height: 30px;
+    z-index: 1;
+}
+
+.svg_c5f96a {
+    z-index: 2;
+}
+
+.numberBadge_df8943 {
+    width: 35px !important;
+    height: 30px !important;
+    justify-content: centre;
+    padding-right: 0 !important;
+}
+
+use[href$='-lower_badge_masks'] {
+    display: none;
+}
+
+.unreadMentionsIndicatorTop_fea3ef,
+.unreadMentionsIndicatorBottom_fea3ef {
+    height: 100px;
+}
+
+.unreadMentionsBar_fea3ef {
+    width: 100px;
+    height: 100%;
+    left: -40%;
+}
