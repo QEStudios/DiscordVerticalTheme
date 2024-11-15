@@ -32,7 +32,7 @@
 }
 
 /* Selected channel pill */
-.item_c4cd66 {
+.guilds_a4d4d9 .item_c4cd66 {
     width: 10px;
 }
 
@@ -45,11 +45,11 @@
     z-index: 1;
 }
 
-.svg_c5f96a {
+.guilds_a4d4d9 .svg_c5f96a {
     z-index: 2;
 }
 
-.numberBadge_df8943 {
+.lowerBadge_c5f96a .numberBadge_df8943 {
     width: 35px !important;
     height: 30px !important;
     justify-content: centre;
