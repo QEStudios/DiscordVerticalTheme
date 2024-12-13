@@ -2,7 +2,7 @@
  * @name VerticalMonitor
  * @description Makes discord better suited for vertical monitors by making the left sidebars collapsible (and some other minor details).
  * @author SKM GEEK
- * @version 1.0.1
+ * @version 1.0.2
  * @authorId 665724183094755359
  * @website https://www.skmgeek.com
  * @source https://github.com/QEStudios/DiscordVerticalTheme
@@ -12,23 +12,23 @@
 /* server left side bar */
 .guilds_a4d4d9 {
     transition-duration: var(--transition-time);
-    width: 10px;
+    width: 10px; !important
 }
 
 .guilds_a4d4d9:hover {
     transition-duration: var(--transition-time);
-    width: 70px;
+    width: 70px; !important
 }
 
 /* channel left side bar */
 .sidebar_a4d4d9 {
     transition-duration: var(--transition-time);
-    width: 120px;
+    width: 120px; !important
 }
 
 .sidebar_a4d4d9:hover {
     transition-duration: var(--transition-time);
-    width: 250px;
+    width: 250px; !important
 }
 
 /* Selected channel pill */
