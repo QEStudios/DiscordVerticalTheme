@@ -2,7 +2,7 @@
  * @name VerticalMonitor
  * @description Makes discord better suited for vertical monitors by making the left sidebars collapsible (and some other minor details).
  * @author SKM GEEK
- * @version 1.0.4
+ * @version 1.0.5
  * @authorId 665724183094755359
  * @website https://www.skmgeek.com
  * @source https://github.com/QEStudios/DiscordVerticalTheme
@@ -10,36 +10,36 @@
  */
 
 /* server left side bar */
-.guilds_a4d4d9 {
+.guilds_c48ade {
     transition-duration: var(--transition-time);
     width: 10px !important;
 }
 
-.guilds_a4d4d9:hover {
+.guilds_c48ade:hover {
     transition-duration: var(--transition-time);
     width: 70px !important;
 }
 
 /* channel left side bar */
-.sidebar_a4d4d9.sidebar_a4d4d9:has(> nav.privateChannels_f0963d),
-.sidebar_a4d4d9.sidebar_a4d4d9:has(> nav.container_ee69e0) {
+.sidebar_c48ade.sidebar_c48ade:has(> nav.privateChannels__35e86),
+.sidebar_c48ade.sidebar_c48ade:has(> nav.container__2637a) {
     transition-duration: var(--transition-time);
     width: 120px !important;
 }
 
-.sidebar_a4d4d9.sidebar_a4d4d9:has(> nav.privateChannels_f0963d):hover,
-.sidebar_a4d4d9.sidebar_a4d4d9:has(> nav.container_ee69e0):hover {
+.sidebar_c48ade.sidebar_c48ade:has(> nav.privateChannels__35e86):hover,
+.sidebar_c48ade.sidebar_c48ade:has(> nav.container__2637a):hover {
     transition-duration: var(--transition-time);
     width: 250px !important;
 }
 
-/* Selected channel pill */
-.guilds_a4d4d9 .item_c4cd66 {
+/* Selected server pill */
+.guilds_c48ade .item__58105 {
     width: 10px;
 }
 
 /* Ping notification */
-.lowerBadge_c5f96a {
+.lowerBadge_cc5dd2 {
     left: -50%;
     top: 50%;
     transform: translateY(-50%) !important;
@@ -47,11 +47,11 @@
     z-index: 1;
 }
 
-.guilds_a4d4d9 .svg_c5f96a {
+.guilds_c48ade .svg_cc5dd2 {
     z-index: 2;
 }
 
-.lowerBadge_c5f96a .numberBadge_df8943 {
+.lowerBadge_cc5dd2 .numberBadge__2b1f5 {
     width: 35px !important;
     height: 30px !important;
     justify-content: centre;
@@ -62,12 +62,12 @@ use[href$='-lower_badge_masks'] {
     display: none;
 }
 
-.unreadMentionsIndicatorTop_fea3ef,
-.unreadMentionsIndicatorBottom_fea3ef {
+.unreadMentionsIndicatorTop_ef3116,
+.unreadMentionsIndicatorBottom_ef3116 {
     height: 100px;
 }
 
-.unreadMentionsBar_fea3ef {
+.unreadMentionsBar_ef3116 {
     width: 100px;
     height: 100%;
     left: -40%;
