@@ -2,7 +2,7 @@
  * @name VerticalMonitor
  * @description Makes discord better suited for vertical monitors by making the left sidebars collapsible (and some other minor details).
  * @author SKM GEEK
- * @version 1.0.5
+ * @version 1.1.0
  * @authorId 665724183094755359
  * @website https://www.skmgeek.com
  * @source https://github.com/QEStudios/DiscordVerticalTheme
@@ -10,36 +10,32 @@
  */
 
 /* server left side bar */
-.guilds_c48ade {
-    transition-duration: var(--transition-time);
+._5e434347c823b592-guilds {
     width: 10px !important;
 }
 
-.guilds_c48ade:hover {
-    transition-duration: var(--transition-time);
+._5e434347c823b592-guilds:hover {
     width: 70px !important;
 }
 
 /* channel left side bar */
-.sidebar_c48ade.sidebar_c48ade:has(> nav.privateChannels__35e86),
-.sidebar_c48ade.sidebar_c48ade:has(> nav.container__2637a) {
-    transition-duration: var(--transition-time);
-    width: 120px !important;
+._5e434347c823b592-sidebarList._5e434347c823b592-sidebarList:has(> nav.e6b7699ce8339e1c-privateChannels),
+._5e434347c823b592-sidebarList._5e434347c823b592-sidebarList:has(> nav._2637a2609f343032-container) {
+    width: 175px !important;
 }
 
-.sidebar_c48ade.sidebar_c48ade:has(> nav.privateChannels__35e86):hover,
-.sidebar_c48ade.sidebar_c48ade:has(> nav.container__2637a):hover {
-    transition-duration: var(--transition-time);
+._5e434347c823b592-sidebarList._5e434347c823b592-sidebarList:has(> nav.e6b7699ce8339e1c-privateChannels):hover,
+._5e434347c823b592-sidebarList._5e434347c823b592-sidebarList:has(> nav._2637a2609f343032-container):hover {
     width: 250px !important;
 }
 
 /* Selected server pill */
-.guilds_c48ade .item__58105 {
+._5e434347c823b592-guilds ._581051df43c5ebb6-item {
     width: 10px;
 }
 
 /* Ping notification */
-.lowerBadge_cc5dd2 {
+.cc5dd25190031396-lowerBadge {
     left: -50%;
     top: 50%;
     transform: translateY(-50%) !important;
@@ -47,27 +43,28 @@
     z-index: 1;
 }
 
-.guilds_c48ade .svg_cc5dd2 {
+._5e434347c823b592-guilds .cc5dd25190031396-svg {
     z-index: 2;
 }
 
-.lowerBadge_cc5dd2 .numberBadge__2b1f5 {
-    width: 35px !important;
+.cc5dd25190031396-lowerBadge ._2b1f52e43a8f1c02-numberBadge {
+    width: 50px !important;
     height: 30px !important;
     justify-content: center;
     padding-right: 0 !important;
+    transform: translateX(-32%) !important;
 }
 
 use[href$='-lower_badge_masks'] {
     display: none;
 }
 
-.unreadMentionsIndicatorTop_ef3116,
-.unreadMentionsIndicatorBottom_ef3116 {
+.ef3116c2da186559-unreadMentionsIndicatorTop,
+.ef3116c2da186559-unreadMentionsIndicatorBottom {
     height: 100px;
 }
 
-.unreadMentionsBar_ef3116 {
+.ef3116c2da186559-unreadMentionsBar {
     width: 100px;
     height: 100%;
     left: -40%;
