@@ -2,69 +2,86 @@
  * @name VerticalMonitor
  * @description Makes discord better suited for vertical monitors by making the left sidebars collapsible (and some other minor details).
  * @author SKM GEEK
- * @version 1.1.1
- * @authorId 665724183094755359
+ * @version 1.2.0
+ * @authorId 665717220130816049
  * @website https://www.skmgeek.com
  * @source https://github.com/QEStudios/DiscordVerticalTheme
  * @updateUrl https://raw.githubusercontent.com/QEStudios/DiscordVerticalTheme/refs/heads/main/DiscordVerticalTheme.theme.css
  */
 
-/* server left side bar */
-.guilds__5e434 {
-    width: 10px !important;
+
+:root {
+    --guild-list-collapsed-width: 10px;
+    --channel-list-collapsed-width: 175px;
 }
 
-.guilds__5e434:hover {
-    width: 70px !important;
+/* server left side bar */
+[class*="guilds_"] {
+    transition-duration: var(--transition-time);
+    width: var(--guild-list-collapsed-width) !important;
 }
+[class*="guilds_"]:hover {
+    transition-duration: var(--transition-time);
+    width: var(--custom-guild-list-width) !important;
+}
+
+/* Prevent scrollbar for guilds occluding the pills and such */
+[data-list-id="guildsnav"] > [class*="scroller_"] {
+  overflow: hidden !important;
+}
+[data-list-id="guildsnav"] > [class*="scroller_"]:hover {
+  overflow: hidden scroll !important;
+}
+
 
 /* channel left side bar */
-.sidebarList__5e434.sidebarList__5e434:has(> nav.privateChannels_e6b769),
-.sidebarList__5e434.sidebarList__5e434:has(> nav.container__2637a) {
-    width: 175px !important;
+[class*="sidebarList_"]:has(> [class*="privateChannels_"]),
+[class*="sidebarList_"]:has(> [class*="container_"]) {
+    /* transition-duration: var(--transition-time); */
+    width: var(--channel-list-collapsed-width) !important;
+}
+[class*="sidebarList_"]:has(> [class*="privateChannels_"]):hover,
+[class*="sidebarList_"]:has(> [class*="container_"]):hover {
+    /* transition-duration: var(--transition-time); */
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 1px) !important;
 }
 
-.sidebarList__5e434.sidebarList__5e434:has(> nav.privateChannels_e6b769):hover,
-.sidebarList__5e434.sidebarList__5e434:has(> nav.container__2637a):hover {
-    width: 250px !important;
-}
-
-/* Selected server pill */
-.guilds__5e434 .item__58105 {
-    width: 10px;
+/* Unread activity pills and selected server pills */
+[class*="guilds_"] .item__o8_Xq {
+    width: 10px; /* Thicker so they can be seen easier */
 }
 
 /* Ping notification */
-.lowerBadge_cc5dd2 {
-    left: -50%;
+[class*="lowerBadge_"] {
+    left: calc(0px - var(--custom-guild-list-padding));
     top: 50%;
     transform: translateY(-50%) !important;
     height: 30px;
     z-index: 1;
 }
-
-.guilds__5e434 .svg_cc5dd2 {
+.guilds_c48ade .svg_cc5dd2 {
     z-index: 2;
 }
-
-.lowerBadge_cc5dd2 .numberBadge__2b1f5 {
-    width: 50px !important;
+[class*="lowerBadge_"] [class*="numberBadge_"] {
+    min-width: 0;
+    width: var(--guild-list-collapsed-width) !important;
     height: 30px !important;
     justify-content: center;
     padding-right: 0 !important;
-    transform: translateX(-32%) !important;
+    border-radius: 0;
 }
-
-use[href$='-lower_badge_masks'] {
+use[href*='-lower_badge_masks'] {
     display: none;
 }
 
-.unreadMentionsIndicatorTop_ef3116,
-.unreadMentionsIndicatorBottom_ef3116 {
+/* Unread mentions indicators at top and bottom */
+[class*="unreadMentionsIndicatorTop"],
+[class*="unreadMentionsIndicatorBottom"] {
     height: 100px;
 }
 
-.unreadMentionsBar_ef3116 {
+/* (The unread mentions bar is made tall so that it's more visible) */
+[class*="unreadMentionsBar"] {
     width: 100px;
     height: 100%;
     left: -40%;
